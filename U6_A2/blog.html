@@ -3,8 +3,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@399&display=swap" class="yeah" rel="stylesheet">
-	<link href="CGstyles.css" rel="stylesheet" type="text/css">
+	<link href="Styling/CGstyles.css" rel="stylesheet" type="text/css">
+
 	<title>Celtec Games -- Blog</title>
+	
 	<!--change above -->
 	<a href="index.html"> <img src="images/banner.png" alt ="Celtec Games banner" width=30% class="image-hover" ID="Banner"> </a>
 <div id="navigation">
@@ -18,18 +20,39 @@
 </head>
 
 <body>
-<div id="main" style="justify-content: center; width: 100%;">
-<div class="section" style="width: 80%; text-align: left; background-color: #660000; color: aliceblue;">
-<p style="font-size: 20px;"> on this page we are going to introduct upcoming updates for our games</p>
-<h1 style="font-size: 30px;">Minecraft</h1>
-<P style="font-size: 20px;">we are adding new server customisation to custom Relms that were not avalible in the past. This includes text colour in the name, world size, player limit, and finaly whitelisting. We know that you guys have been asking for thease features </P>
-<h1 style="font-size: 30px;">Hollow Knight</h1>
-<p style="font-size: 20px;"> The in game map is going to be increased in quality and we are going to allow players to zoom in to find greater detail. </p>
-<p style="font-size: 20px;">We will aslo be adding a early access multiplayer mode with the help of popular modders</p>
 
+    <!--Main Page Content-->
+    <main id="blogContent"> <!-- this part is created with large amounts of healp from ed-->
+      <section id="updates">
+        <h2>Latest Updates</h2>
+
+        <!-- Blog Posts -->
+        <div class="post">
+          <h3>Minecraft</h3>
+          <p>we are adding new server customisation to custom Relms that were not avalible in the past. This includes text colour in the name, world size, player limit, and finaly whitelisting. We know that you guys have been asking for thease features </p>
+          <small>Posted: April 3, 2025 by Mojang</small>
+        </div>
+
+        
+        <div class="post">
+          <h3>Hollow Knight</h3>
+          <p>The in game map is going to be increased in quality and we are going to allow players to zoom in to find greater detail.
+			We will aslo be adding a early access multiplayer mode with the help of popular modders
+		  </p>
+          <small>Posted: March 20, 2025 by TeamCherry</small>
+        </div>
+
+
+         <!-- Pagination controls -->
+        <div class="pagination">
+          <button id="prevPage" onclick="changePage(-1)">Previous</button>
+          <span id="pageIndicator">Page 1 of 3</span>
+          <button id="nextPage" onclick="changePage(1)">Next</button>
+        </div>
+      </section>
 </div>
 <div class="section" style="justify-content:center; width:100%;">
-<img src="images/blog1.jpeg" style="width:40%;;"
+<img src="images/blog1.jpeg" style="width:40%;;">
 </div>
 </div>
 </div>
@@ -72,5 +95,44 @@
   </div>
 </footer>
 
+<script> // ed script
+	// Pagination functionality
+	const postsPerPage = 1;
+	let currentPage = 1;
+
+	// Function to show the current page of blog posts
+	function showPage(page) {
+	  const posts = document.querySelectorAll(".post");
+	  const totalPages = Math.ceil(posts.length / postsPerPage);
+
+	  posts.forEach((post, index) => {
+		post.style.display =
+		  index >= (page - 1) * postsPerPage && index < page * postsPerPage
+			? "block"
+			: "none";
+	  });
+
+	  // Enable/Disable pagination buttons based on current page
+	  document.getElementById("prevPage").disabled = page === 1;
+	  document.getElementById("nextPage").disabled = page === totalPages;
+	  document.getElementById("pageIndicator").textContent = `Page ${page} of ${totalPages}`;
+	}
+
+	// Function to change pages when clicking pagination buttons
+	function changePage(delta) {
+	  const posts = document.querySelectorAll(".post");
+	  const totalPages = Math.ceil(posts.length / postsPerPage);
+
+	  currentPage += delta;
+	  if (currentPage < 1) currentPage = 1;
+	  if (currentPage > totalPages) currentPage = totalPages;
+
+	  showPage(currentPage);
+	}
+
+	showPage(currentPage);
+  </script>
+
 
 </html>
+

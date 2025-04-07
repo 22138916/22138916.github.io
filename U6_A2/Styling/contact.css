@@ -1,0 +1,63 @@
+/* Form container (Credits to Edward Again)*/
+.form-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: #66000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Other form styles */
+  .form-title {
+    color: white;
+  }
+  
+  .form-description {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .form-container label {
+    color: white;
+  }
+  
+  /* Adjust the width of input fields */
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="tel"] {
+    width: 100%; /* Makes the input fields take up the full width of the form container */
+    max-width: 400px; /* Optional: Set a max-width for consistency */
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid   #8a8a8a;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+  }
+  
+  /* Ensure email input validates email format */
+  .form-container input[type="email"] {
+    /* You can add specific styles for email input here if needed */
+  }
+  
+  /* Other styles for the form */
+  .form-disclaimer {
+    color: white;
+  }
+  
+  .registerbtn {
+    background-color: #ED2939;
+    border: 3px solid #D21F3C;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+  }
+  
+  .registerbtn:hover {
+    background-color: #D21F3C;
+  }

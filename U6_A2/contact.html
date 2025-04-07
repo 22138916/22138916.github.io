@@ -3,8 +3,10 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@399&display=swap" class="yeah" rel="stylesheet">
-	<link href="CGstyles.css" rel="stylesheet" type="text/css">
+	<link href="Styling/CGstyles.css" rel="stylesheet" type="text/css">
+	<link href="Styling/contact.css" rel="stylesheet" type="text/css">
 	<title>Celtec Games -- Blog</title>
+	
 	<!--change above -->
 	<a href="index.html"> <img src="images/banner.png" alt ="Celtec Games banner" width=30% class="image-hover" ID="Banner"> </a>
 <div id="navigation">
@@ -20,54 +22,50 @@
 <body>
 <div id="main" style="margin-top: 10px;">
 	<div class="container4">
-		<section class="section4" style="font-size: 20px;">
-			<p> If you need help with anything, feel free to contact us!</p>
-			<p> Email-- customersupport@celtec.co.uk</p>
-			<p> Phone Number-- 44+7469853721</p>
-			<p> Address-- 1 Main Street, Holywell</p>
-			<P> Thank you for using our services!</P>
-
-
-
-
-
-		</section>
-		<section class="section4"> 
-			<img src="images/contactus1.jpg" alt="our staff working"
-
-
-		</section>
-	</div>
-	<div class="container4">
-		<section class="section3">
-			<div class="contact-flex"> <!-- this section isnt fully original and was made with asistance form ed -->
-				<form action="">
-				  <div class="form-container">
-					<h1 align="center" class="form-title">Feel free to ask us any questions!</h1>
-					<p align="center" class="form-description">Fill out the form below with your contact information and query and we will try to respond as soon as possible!</p>
-					<hr/>
-					<div align="center">
-					  <label for="name"><b>Name</b></label><br />	
-					  <input type="text" placeholder="Enter Name" name="name" id="name" required /><br /><br />
-					
-				  	<label for="email"><b>Email</b></label><br />
-					  <input type="text" placeholder="Enter Email" name="email" id="email" required /><br /><br />
-  
-					  <label for="telnum"><b>Phone Number</b></label><br />
-					  <input type="text" placeholder="Enter Phone Number" name="telnum" id="telnum" required /><br /><br />
-  
-					  <label for="inquiries"><b>Comments</b></label><br />
-					  <input type="text" placeholder="Enter Your Inquiries" name="inquiries" id="inquiries" required /><br /><br />
-					</div>
-			
-  
-					<p class="form-disclaimer">
-					  By creating an account you agree to our <a href="#">Terms & Privacy</a>.
-					</p>
+		<!--Contact form section (Credit to Edward for this section of code-->
+		<div class="contact-flex">
+			<form action="mailto:22110294@cambria.ac.uk" method="post" enctype="text/plain">
+			  <div class="form-container">
+				<h1 align="center" class="form-title">Feel free to ask us any questions!</h1>
+				<p align="center" class="form-description">Fill out the form below with your contact information and query and we will try to respond as soon as possible!</p>
+				<hr />
+	  
+				<!--User input section with the placeholder text that shows before clicked-->
+				<div align="center">
+				  <label for="name"><b>Name</b></label><br />
+				  <input type="text" placeholder="Enter Name" name="name" id="name" required /><br /><br />
+	  
+				  <label for="email"><b>Email</b></label><br />
+				  <input type="email" placeholder="Enter Email" name="email" id="email" required /><br /><br />
+	  
+				  <label for="telnum"><b>Phone Number</b></label><br />
+				  <input type="tel" placeholder="Enter Phone Number" name="telnum" id="telnum" pattern="[0-9\s\-\+\(\)]+" title="Please enter a valid phone number" required /><br /><br />            
+	  
+				  <label for="inquiries"><b>Comments</b></label><br />
+				  <input type="text" placeholder="Enter Your Inquiries" name="inquiries" id="inquiries" required /><br /><br />
+				</div>
+	  
+				<p class="form-disclaimer">
+				  By submitting a query you are agreeing to our <a href="#">Terms & Privacy</a>.
+				</p>
 				<button type="submit" class="registerbtn">Submit</button>
 			  </div>
 			</form>
-		</div>
+	</div>
+
+
+
+
+
+		</section>
+		<section class="section4" style="height: fit-content;"> 
+			<img src="images/contactus1.jpg" alt="our staff working" style="padding-bottom: 0;">
+			<p> Email - celtecsupport@celtec.co.uk</p>
+			<p> Phone Number - 07469 785375</p>
+		</section>
+		
+	</div>
+
 	</section>
 	</div>
 </div>
@@ -110,4 +108,7 @@
     </section>
   </div>
 </footer>
+
+
+
 </html>

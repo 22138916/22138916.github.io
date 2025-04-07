@@ -3,8 +3,9 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@399&display=swap" class="yeah" rel="stylesheet">
-	<link href="CGstyles.css" rel="stylesheet" type="text/css">
-	<title>Celtec Games -- about us</title>
+	<link href="Styling/CGstyles.css" rel="stylesheet" type="text/css">
+	<title>Celtec Games -- About Us</title>
+	<link rel="icon" type="image/png" href="banner.png"/>
 	<!--change above -->
 	<a href="index.html"> <img src="images/banner.png" alt ="Celtec Games banner" width=30% class="image-hover" ID="banner"> </a>
 <div id="navigation">
@@ -21,20 +22,26 @@
 <div id="main">
 <div style="margin-bottom: 20px;">
 	<div class="container4">
-		<section class="section4">
-			<p style="font-size: 20px;"> Celtec Games is an innovative independent video game developer dedicated to crafting original titles for desktop, mobile and all major platforms. Based in Wrexham, North East Wales, we merge creativity with technical expertise to develop engaging games that captivate players of all ages. Our portfolio includes games for mobile (iOS, Android), desktop, and major consoles (PlayStation, Xbox, Nintendo Switch). </p>
-		</section>
-		<section class="section4">
-			<img src="images/aboutus1.jfif"alt="Image of Minecraft">
-		</section>
+      <!-- FAQ Section with interactive answer toggles -->
+      <section class="faq-item">
+
+         <!-- Each FAQ item consists of a button and a hidden answer that toggles on click -->
+        <div class="section4" style=" width: 800px; height: fit-content;" class="faq-item">
+			<p style="font-size:20px;">Celtec Games is an innovative independent video game developer dedicated to crafting original titles for desktop, mobile and all major platforms. Based in Wrexham, North East Wales, we merge creativity with technical expertise to develop engaging games that captivate players of all ages. Our portfolio includes games for mobile (iOS, Android), desktop, and major consoles (PlayStation, Xbox, Nintendo Switch).</p>
+          <button class="faq-question">What platforms do your games support?</button>
+          <div class="faq-answer" style="display: none;">	<img src="images/aboutus1.jfif" width="400px" style="margin: 0px; padding: 10px;" alt="Image of Minecraft"></div>
+        </div>
+	  </section>
+	  <section class="faq-item">
+
+		<!-- Each FAQ item consists of a button and a hidden answer that toggles on click -->
+	   <div class="section4" style=" width: 800px; height: fit-content;" class="faq-item">
+		   <p style="font-size:20px;">At Celtec Games, we believe that the heart of game development lies in creativity, collaboration, and a shared vision. Our team is composed of talented individuals who are passionate about gaming and committed to producing high-quality entertainment. We strive to create a workplace culture that fosters innovation and inclusivity, ensuring that every voice is heard and valued.</p>
+		 <button class="faq-question">What platforms do your games support?</button>
+		 <div class="faq-answer" style="display: none;">	<img src="images/aboutus2.avif" style="margin: 0px; padding: 10px;" width="400px" alt="Image of Minecraft"></div>
+	   </div>
+	 </section>
 	</div>
-	<div class="container4">
-		<section class="section4">
-			<img src="images/aboutus2.avif"alt="Image of Minecraft">
-		</section>
-		<section class="section4">
-			<p style="font-size: 20px;"> Celtec Games is an innovative independent video game developer dedicated to crafting original titles for desktop, mobile and all major platforms. Based in Wrexham, North East Wales, we merge creativity with technical expertise to develop engaging games that captivate players of all ages. Our portfolio includes games for mobile (iOS, Android), desktop, and major consoles (PlayStation, Xbox, Nintendo Switch). </p>
-		</section>
 	</div>
 </div>
 </div>
@@ -44,7 +51,7 @@
     <section class="section">
       <h2>Shopping With us?</h2>
 	  <p> you can find our products here or press on a link under the latest products tab-</p>
-	  <b><a href="products.html">Products </a> </b>
+	  <b><a href="products.html">Products </a></b>
 	  
 	  
       
@@ -66,15 +73,27 @@
     <section class="section">
       <h2>Celtec UK</h2>
 	  <div id=footernav>
-	  <p><a href="index.html">Home Page</a> </p>
+	  <p><a href="index.html">Home Page</a></p>
 	  <p><a href="blog.html">Blog </a> </p>
-	  <p><a href="aboutus.html">About Us </a> </p>
-	  <p><a href="products.html">Products </a> </p>
-	  <p><a href="contact.html">Contact Us </a> </p>
+	  <p><a href="aboutus.html">About Us </a></p>
+	  <p><a href="products.html">Products </a></p>
+	  <p><a href="contact.html">Contact Us </a></p>
 	  </div>
 	  
       
     </section>
   </div>
 </footer>
+
+    <!-- JavaScript to toggle FAQ answers on button click (saves creating an entire new script or adding to current script which could cause issues)-->
+    <script>
+		const questions = document.querySelectorAll(".faq-question");
+		questions.forEach((btn) => {
+		  btn.addEventListener("click", () => {
+			const answer = btn.nextElementSibling;
+			answer.style.display = answer.style.display === "block" ? "none" : "block";
+		  });
+		});
+	  </script>
+
 </html>
