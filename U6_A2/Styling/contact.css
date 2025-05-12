@@ -2,10 +2,10 @@
 .form-container {
     width: 80%;
     max-width: 600px;
-    background-color: #66000;
+    background-color: #660000;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: #ED2939;
   }
   
   /* Other form styles */
@@ -47,7 +47,7 @@
   
   .registerbtn {
     background-color: #ED2939;
-    border: 3px solid #D21F3C;
+    border: px solid #D21F3C;
     border-radius: 25px;
     color: white;
     padding: 10px 20px;
